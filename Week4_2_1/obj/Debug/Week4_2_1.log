@@ -1,0 +1,7 @@
+﻿  ofApp.cpp
+src\ofApp.cpp(30): error C2065: 'x': undeclared identifier
+src\ofApp.cpp(33): error C2065: 'x': undeclared identifier
+src\ofApp.cpp(37): error C2059: syntax error: '}'
+src\ofApp.cpp(37): error C2143: syntax error: missing ';' before '}'
+src\ofApp.cpp(40): error C2143: syntax error: missing ';' before '{'
+src\ofApp.cpp(40): error C2447: '{': missing function header (old-style formal list?)
