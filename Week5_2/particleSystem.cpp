@@ -1,0 +1,30 @@
+#include "particleSystem.h"
+
+
+particleSystem::particleSystem(ofVec2f pos) {
+	myPos = pos;
+}
+
+void particleSystem::update(ofVec2f force) {
+
+	if (myParticles.size() < MAX_SIZE) {
+		particle myParticle(myPos);
+		myParticles.push_back(myParticle);
+	}
+
+	for (int i = 0; i <myParticles.size(); i++) {
+		myParticles[i].applyForce(force);
+		float distance = (myParticles[i].myPos - myPos).length();
+		float changeInVel = ofMap(distance, 0, 400, 4, 0);
+
+		myParticles[i].update(changeInVel);
+	}
+
+}
+
+void particleSystem::draw() {
+	for (int i = 0; i < myParticles.size(); i++) {
+		myParticles[i].draw();
+	}
+
+}
