@@ -8,7 +8,7 @@ beatAllow = true;
 screenshotCount = 0;
 
 	cursor.load("cursor1.png");
-	musicName = "badname";
+	musicName = "bronson";
 	musicType = ".mp3";
 beat.loadSound(musicName + musicType);
 //i took fffSmooth and the ability to store beat from Lewis Lepton's
@@ -22,7 +22,7 @@ bands = 64;
 beat.setLoop(true);
 beat.setVolume(0.2);
 
-	ofBackground(179, 158, 181);
+	ofBackground(0);
 	ofSetLineWidth(3);
 	//ofSetBackgroundAuto(false);
 
@@ -33,7 +33,7 @@ beat.setVolume(0.2);
 void ofApp::update() {
 	if (ofGetElapsedTimeMillis() > nextTrigger) {
 	beatAllow = true;
-	nextTrigger = ofGetElapsedTimeMillis()+ 20;
+	nextTrigger = ofGetElapsedTimeMillis()+ 50;
 	}
 	else {
 		beatAllow = false;
@@ -55,7 +55,7 @@ if (backgroundReset == true){
 
 if(musicPlaying == true){
 for (int i = 0; i < bands; i++){
-	if (fftSmooth[i] > 0.6 && beatAllow == true) {
+	if (fftSmooth[i] > 0.4 && beatAllow == true) {
 		ofSetLineWidth(1);
 		if (w.x >= 0) {
 			if (w.y <= 0) {
@@ -103,7 +103,7 @@ if (musicPlaying == false){
 	line.draw();
 
 	if (lineReset == true) {
-	ofSetColor(0, 100);
+	ofSetColor(255, 100);
 		pt.set(w.x, w.y);
 		line.addVertex(pt);
 	} 
@@ -113,9 +113,9 @@ if (musicPlaying == false){
 	if (backgroundReset == false) {
 		ofRotate(a - 90);
 	}
-	ofSetColor(0, 100);
+	ofSetColor(255);
 	cursor.draw(-5, -8, 10, 16);
-	ofPopMatrix();
+	ofPopMatrix(); 
 }
 
 //--------------------------------------------------------------

@@ -1,6 +1,4 @@
-﻿  main.cpp
-  ofApp.cpp
-  walker.cpp
+﻿  ofApp.cpp
      Creating library bin\randomWalk_debug.lib and object bin\randomWalk_debug.exp
   randomWalk.vcxproj -> C:\Users\meric\Desktop\of_v0.9.8_vs_release\apps\myApps\FreqMapGenerator\bin\randomWalk_debug.exe
   randomWalk.vcxproj -> bin\randomWalk_debug.pdb (Full PDB)

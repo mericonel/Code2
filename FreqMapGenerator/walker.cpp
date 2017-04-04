@@ -30,7 +30,7 @@ void walker::update() {
 
 
 void walker::draw() {
-	ofSetColor(0, 100);
+	ofSetColor(255, 100);
 	ofDrawRectangle(x, y, 1, 1);
 }
 
